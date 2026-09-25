@@ -1,0 +1,228 @@
+{
+  "$schema": "https://hermes.nousresearch.com/schemas/skill-manifest.v1.json",
+  "name": "@basancorp/nocobase-master-agent-kit",
+  "version": "2.4.0",
+  "displayName": "NocoBase & BasanCorp Enterprise Master Agent Kit (Version-Adaptive)",
+  "description": "Comprehensive skill suite for NocoBase with multi-version adaptive intelligence (v2.2.x LTS, v2.4-alpha Rsbuild, and v3.0-alpha Vibe-Coding). Covers data modeling, UI building, enterprise multi-level approval flow, webhook security, external data sources, tenant printing, and plugin development.",
+  "author": "BASANCORP Enterprise Solutions",
+  "license": "MIT",
+  "engines": {
+    "hermes": ">=2.0.0",
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "nocobase",
+    "nocobase-v2",
+    "approval-flow",
+    "bpm",
+    "workflow",
+    "data-modeling",
+    "ui-builder",
+    "webhook-gateway",
+    "multi-tenant",
+    "print-manager",
+    "basancorp"
+  ],
+  "skills": [
+    {
+      "name": "nocobase-data-modeling",
+      "entrypoint": "skills/nocobase-data-modeling/SKILL.md",
+      "category": "data-architecture",
+      "description": "Create and manage NocoBase collections, fields, relations (o2m, m2o, m2m), indexes, and server-side Joi validation rules.",
+      "tags": ["nocobase", "data-modeling", "schema", "relations", "validation"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-ui-builder",
+      "entrypoint": "skills/nocobase-ui-builder/SKILL.md",
+      "category": "frontend-ui",
+      "description": "Author Modern UI pages, blocks, tables, forms, details, calendar, kanban, charts, and jsBlock KPI metric cards.",
+      "tags": ["nocobase", "ui-builder", "dashboard", "charts", "kpi", "blocks"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-portal-manage",
+      "entrypoint": "skills/nocobase-portal-manage/SKILL.md",
+      "category": "routing-dispatch",
+      "description": "Dispatcher for NocoBase UI authoring: resolves active portals and routes between No-code Portal (/v/) and AI Portal (/x/).",
+      "tags": ["nocobase", "portal", "routing", "dispatch"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-approval-flow",
+      "entrypoint": "skills/nocobase-approval-flow/SKILL.md",
+      "category": "enterprise-bpm",
+      "description": "Enterprise multi-level approval flow engine: org-tree hierarchy, digital touch signatures, 1-click batchAct, recall, urge, resubmit, auto code sequences, physical state writeback, 3-generation compatibility (v1/v2/v3), and 8 enterprise security/concurrency guardrails.",
+      "tags": ["nocobase", "approval-flow", "bpm", "org-tree", "digital-signature", "batch-act", "concurrency-lock", "security-hardened", "basancorp"],
+      "allowedTools": ["shell", "file_reads", "nb", "http_client"]
+    },
+    {
+      "name": "basancorp-workflow-webhook",
+      "entrypoint": "skills/basancorp-workflow-webhook/SKILL.md",
+      "category": "security-integration",
+      "description": "Fintech-grade Webhook Gateway: HMAC-SHA256 signature verification, constant-time comparison, X-Timestamp anti-replay protection, 4-tier log cleaner, and 1-click replay.",
+      "tags": ["nocobase", "webhook", "security", "hmac", "anti-replay", "gateway", "basancorp"],
+      "allowedTools": ["shell", "file_reads", "nb", "http_client"]
+    },
+    {
+      "name": "basancorp-data-source-external",
+      "entrypoint": "skills/basancorp-data-source-external/SKILL.md",
+      "category": "data-integration",
+      "description": "External database connector for PostgreSQL, MySQL, MariaDB with enforced read-only guard, connection pool tuning, and 1-click schema drift refresh.",
+      "tags": ["nocobase", "external-db", "postgresql", "mysql", "read-only", "schema-drift", "basancorp"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "basancorp-tenant-print",
+      "entrypoint": "skills/basancorp-tenant-print/SKILL.md",
+      "category": "document-automation",
+      "description": "Dual-engine document print & export: direct thermal POS bill printing (80mm/58mm) and Word DOCX/PDF template rendering with Vietnamese currency in words and approval signatures.",
+      "tags": ["nocobase", "print", "pos", "invoice", "docx", "pdf", "handover", "basancorp"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "basancorp-multi-space",
+      "entrypoint": "skills/basancorp-multi-space/SKILL.md",
+      "category": "saas-architecture",
+      "description": "Multi-Tenant & Multi-Workspace enterprise manager: Schema-per-Tenant isolation, hybrid plugin tiering, ghost login, and tenant clean view.",
+      "tags": ["nocobase", "multi-tenant", "multi-space", "subapp", "schema-per-tenant", "ghost-login", "basancorp"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-workflow-manage",
+      "entrypoint": "skills/nocobase-workflow-manage/SKILL.md",
+      "category": "automation",
+      "description": "Manage backend automation workflows, triggers (table events, cron, webhook), sequential node chains, version-safe revisions, and execution diagnosis.",
+      "tags": ["nocobase", "workflow", "automation", "triggers", "cron"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-acl-manage",
+      "entrypoint": "skills/nocobase-acl-manage/SKILL.md",
+      "category": "security-governance",
+      "description": "Manage roles, action permissions, data scopes, user-role membership, and state-based record locks.",
+      "tags": ["nocobase", "acl", "permissions", "roles", "data-scope"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-env-manage",
+      "entrypoint": "skills/nocobase-env-manage/SKILL.md",
+      "category": "devops",
+      "description": "Manage NocoBase application environments via nb CLI: installation, runtime start/stop, database connections, and version upgrades.",
+      "tags": ["nocobase", "env", "cli", "devops", "lifecycle"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-revision",
+      "entrypoint": "skills/nocobase-revision/SKILL.md",
+      "category": "version-control",
+      "description": "Save completed app-building milestones as restorable snapshots via nb revision create with safe rollback capability.",
+      "tags": ["nocobase", "revision", "snapshot", "rollback", "milestone"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-publish-manage",
+      "entrypoint": "skills/nocobase-publish-manage/SKILL.md",
+      "category": "release-management",
+      "description": "Cross-environment release operations: backup, restore, and schema migration between staging and production instances.",
+      "tags": ["nocobase", "publish", "backup", "restore", "migration"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-dsl-reconciler",
+      "entrypoint": "skills/nocobase-dsl-reconciler/SKILL.md",
+      "category": "gitops-dsl",
+      "description": "Declarative YAML-DSL building path for whole NocoBase systems committed to git and synchronized via cli push.",
+      "tags": ["nocobase", "dsl", "yaml", "gitops", "reconciler"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-ai-builder",
+      "entrypoint": "skills/nocobase-ai-builder/SKILL.md",
+      "category": "source-code-ui",
+      "description": "Build, customize, and verify full source-code React/TypeScript applications in NocoBase AI Portals (/x/).",
+      "tags": ["nocobase", "ai-portal", "react", "typescript", "frontend"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-plugin-development",
+      "entrypoint": "skills/nocobase-plugin-development/SKILL.md",
+      "category": "plugin-development",
+      "description": "Multi-version NocoBase plugin engineering (v2.2 LTS dual-client, v2.4 Rsbuild, v3 Headless/Refine), Zero-Trust ACL, state machine concurrency locking, safe document printing, and v1 AMD stub compatibility.",
+      "tags": ["nocobase", "plugin", "dual-client", "rsbuild", "flowengine", "backend", "frontend", "security-acl", "concurrency"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-plugin-manage",
+      "entrypoint": "skills/nocobase-plugin-manage/SKILL.md",
+      "category": "plugin-management",
+      "description": "Inspect, enable, disable, and configure NocoBase plugins via CLI.",
+      "tags": ["nocobase", "plugin-manage", "plugins", "cli"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-ai-employee",
+      "entrypoint": "skills/nocobase-ai-employee/SKILL.md",
+      "category": "ai-agents",
+      "description": "AI employee lifecycle management: model restrictions, prompt configuration, and knowledge-base bindings.",
+      "tags": ["nocobase", "ai-employee", "agents", "prompts"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-ai-knowledge-base-manager",
+      "entrypoint": "skills/nocobase-ai-knowledge-base-manager/SKILL.md",
+      "category": "ai-rag",
+      "description": "Manage vector databases, local/external knowledge bases, documents, and semantic retrieval tests.",
+      "tags": ["nocobase", "rag", "vector-db", "knowledge-base"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-ai-manager",
+      "entrypoint": "skills/nocobase-ai-manager/SKILL.md",
+      "category": "ai-infra",
+      "description": "Manage AI LLM providers, model bindings, and API keys securely.",
+      "tags": ["nocobase", "ai-manager", "llm", "providers"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-data-analysis",
+      "entrypoint": "skills/nocobase-data-analysis/SKILL.md",
+      "category": "analytics",
+      "description": "Query and analyze business data across collections via MCP protocols.",
+      "tags": ["nocobase", "data-analysis", "mcp", "analytics"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-file-manager",
+      "entrypoint": "skills/nocobase-file-manager/SKILL.md",
+      "category": "storage",
+      "description": "Manage file storage engines (local, S3, OSS), file collections, and attachment metadata.",
+      "tags": ["nocobase", "files", "storage", "attachments"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-notification-manage",
+      "entrypoint": "skills/nocobase-notification-manage/SKILL.md",
+      "category": "notifications",
+      "description": "Configure in-app messaging, email SMTP channels, and workflow notification nodes.",
+      "tags": ["nocobase", "notifications", "email", "in-app"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-prototype-repro",
+      "entrypoint": "skills/nocobase-prototype-repro/SKILL.md",
+      "category": "rapid-prototyping",
+      "description": "Faithfully reproduce HTML or design mockups into native NocoBase applications.",
+      "tags": ["nocobase", "prototyping", "figma-to-code", "ui-repro"],
+      "allowedTools": ["shell", "file_reads", "nb"]
+    },
+    {
+      "name": "nocobase-utils",
+      "entrypoint": "skills/nocobase-utils/SKILL.md",
+      "category": "developer-utilities",
+      "description": "Reference utilities covering filter conditions, evaluator formula engines (math.js, formula.js), and expression syntax.",
+      "tags": ["nocobase", "utils", "evaluators", "filters"],
+      "allowedTools": ["file_reads"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@basancorp/nocobase-master-agent-kit",
+  "version": "2.4.0",
+  "description": "Universal NocoBase Multi-Version (v2.2 LTS, v2.4-alpha, v3.0-alpha) & BasanCorp Enterprise Skill Suite for AI Agents (Hermes, Claude Code, Cursor, Windsurf, Antigravity)",
+  "author": "BASANCORP Enterprise Solutions",
+  "license": "MIT",
+  "type": "agent-skill-suite",
+  "manifestVersion": "1.0.0",
+  "hermes": {
+    "configFile": "hermes.json",
+    "compatible": true
+  },
+  "skillsCount": 25,
+  "skillsDirectory": "./skills"
+}
+
